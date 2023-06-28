@@ -1,10 +1,10 @@
-name: sf_dev_to_stage_deployment
+name: sf_stage_to_prod_deployment
 
 #Controls when action will run.
 on:
   push:
     branches:
-      - stg
+      - main
     paths:
       - 'sf_scripts/**'
       
