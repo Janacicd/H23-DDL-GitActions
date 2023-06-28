@@ -1,4 +1,4 @@
-name: sf_stage_to_prod_deployment
+name: Dev_to_Stage_deployment
 
 #Controls when action will run.
 on:
