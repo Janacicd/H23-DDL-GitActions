@@ -33,10 +33,10 @@ jobs:
         id: sc-deploy
         working-directory: ./sf_scripts
         env:
-          SNOWFLAKE_ACCOUNT: ${{ secrets.Prod.SNOWFLAKE_ACCOUNT }}
-          SNOWFLAKE_USER: ${{ secrets.Prod.SNOWFLAKE_USER }}
-          SNOWFLAKE_ROLE: ${{ secrets.Prod.SNOWFLAKE_ROLE }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.Prod.SNOWFLAKE_PASSWORD }}
-          SNOWFLAKE_WH: ${{ secrets.Prod.SNOWFLAKE_WH }}
-          SNOWFLAKE_DB: ${{ secrets.Prod.SNOWFLAKE_DB }}
+          SNOWFLAKE_ACCOUNT: ${{ secrets.dev.SNOWFLAKE_ACCOUNT }}
+          SNOWFLAKE_USER: ${{ secrets.dev.SNOWFLAKE_USER }}
+          SNOWFLAKE_ROLE: ${{ secrets.dev.SNOWFLAKE_ROLE }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.dev.SNOWFLAKE_PASSWORD }}
+          SNOWFLAKE_WH: ${{ secrets.dev.SNOWFLAKE_WH }}
+          SNOWFLAKE_DB: ${{ secrets.dev.SNOWFLAKE_DB }}
         run: schemachange -a $SNOWFLAKE_ACCOUNT -u $SNOWFLAKE_USER -r $SNOWFLAKE_ROLE -w $SNOWFLAKE_WH -d $SNOWFLAKE_DB -c $SNOWFLAKE_DB.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
