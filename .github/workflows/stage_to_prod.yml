@@ -4,7 +4,7 @@ name: sf_stage_to_prod_deployment
 on:
   push:
     branches:
-      - main
+      - dev
     paths:
       - 'sf_scripts/**'
       
